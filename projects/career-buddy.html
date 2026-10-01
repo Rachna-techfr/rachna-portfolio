@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Buddy — Multi-Agent AI Career Assistant | Rachna R</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body class="project-detail-page">
+  <!-- Ambient background -->
+  <div class="aurora-bg" aria-hidden="true">
+    <canvas id="constellation-3d-canvas"></canvas>
+    <div class="aurora-mesh"></div>
+    <div class="bg-grid"></div>
+    <div class="light-beam light-beam-1"></div>
+    <div class="light-beam light-beam-2"></div>
+  </div>
+
+  <div class="project-detail-container">
+    <a href="../index.html#projects" class="back-nav-link">← Back to Projects</a>
+
+    <header class="project-detail-header">
+      <h1>Career Buddy</h1>
+      <p class="project-detail-tagline">Multi-agent career platform with LangGraph &amp; RAG, as a REST API</p>
+      <p class="project-detail-desc">
+        A cooperative multi-agent AI system that automates resume evaluation, skill gap analysis, interview simulation,
+        and job recommendation using stateful LangGraph agents, FAISS vector search, and Streamlit + FastAPI deployment.
+      </p>
+      <a href="https://github.com/Rachna-techfr" target="_blank" rel="noopener" class="btn-view-source">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+        </svg>
+        View source
+      </a>
+    </header>
+
+    <div class="project-detail-cover">
+      <img src="../assets/project_career_buddy.jpg" alt="Career Buddy Preview" />
+    </div>
+
+    <div class="project-detail-tags">
+      <span>Python</span><span>LangGraph</span><span>LangChain</span><span>FastAPI</span><span>FAISS</span><span>RAG</span><span>Streamlit</span>
+    </div>
+
+    <div class="project-metrics-grid">
+      <div class="metric-card">
+        <span class="metric-title highlight-cyan">FastAPI</span>
+        <span class="metric-sub">Backend API</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-title highlight-cyan">5 Agents</span>
+        <span class="metric-sub">LangGraph Orchestration</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-title highlight-cyan">FAISS RAG</span>
+        <span class="metric-sub">Vector Document Store</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-title highlight-cyan">Voice + Text</span>
+        <span class="metric-sub">Interactive Simulator</span>
+      </div>
+    </div>
+
+    <section class="detail-section">
+      <h2>The problem</h2>
+      <p>
+        Job seekers and graduates struggle with fragmented career preparation tools: static resume builders lack
+        intelligent feedback, generic interview prep questions fail to simulate real technical dialogue, and candidate
+        skill gaps remain unidentified until rejection. I wanted to build an automated, end-to-end career copilot that
+        directly understands candidate resumes, market requirements, and live interview conversations.
+      </p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Approach</h2>
+      <p>
+        I designed a FastAPI REST backend powered by a stateful 5-agent LangGraph network. The system ingests resumes in
+        PDF/text format, parses experience vectors into a FAISS retriever, orchestrates specialized agents for skill gap
+        analysis and interview coaching, and reconciles output into structured JSON for Streamlit web consumption.
+      </p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Architecture</h2>
+      <ul class="detail-bullets">
+        <li>FastAPI REST API with endpoints for resume intake, multi-agent evaluation, and voice audio streams</li>
+        <li>Stateful LangGraph multi-agent graph coordinating Resume Analyzer, Skill Matcher, Interview Coach, and Job
+          Finder</li>
+        <li>FAISS vector database for semantic retriever augmentation over industry job descriptions and interview
+          rubrics</li>
+        <li>Streamlit web dashboard with interactive graph visualization and live audio response feedback</li>
+        <li>Comprehensive evaluation logging and latency monitoring for production deployment readiness</li>
+      </ul>
+    </section>
+
+    <section class="detail-section">
+      <h2>Challenges</h2>
+      <ul class="detail-bullets">
+        <li>Complex multi-agent handoffs: maintaining conversation state across 5 distinct LangGraph nodes without
+          losing context.</li>
+        <li>Unstructured resume parsing: extracting accurate skills, timelines, and metrics from heterogeneous PDF
+          layouts.</li>
+        <li>Low-latency response: streaming model outputs efficiently to provide real-time audio interview feedback.
+        </li>
+      </ul>
+    </section>
+
+    <section class="detail-section">
+      <h2>Results</h2>
+      <ul class="detail-bullets">
+        <li>Fully functional multi-agent career copilot serving resume scores, skill gaps, and interview prep.</li>
+        <li>High-precision RAG retriever providing grounded advice backed by real market job specs.</li>
+        <li>Modular, containerizable Python codebase ready for cloud microservices deployment.</li>
+      </ul>
+    </section>
+
+    <!-- Get in Touch CTA Block -->
+    <div class="project-cta-block">
+      <h3>Interested in this AI solution or collaboration?</h3>
+      <p>Reach out to discuss AI engineering, RAG pipelines, or custom machine learning systems.</p>
+      <a href="../index.html#contact" class="btn-get-in-touch">
+        Get in Touch <span>↗</span>
+      </a>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

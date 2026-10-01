@@ -1,0 +1,5 @@
+.pdf-preview/
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db

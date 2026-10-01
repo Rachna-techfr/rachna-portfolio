@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Rachna R — Artificial Intelligence Engineer & Machine Learning Developer (CGPA 8.74). Generative AI, LLMs, RAG, Computer Vision, and Model Deployment." />
+  <title>Rachna R | AI Engineer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500;600;700&family=Sacramento&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- Ambient Aurora Mesh, 3D Constellation & Particles -->
+  <div class="aurora-bg" aria-hidden="true">
+    <canvas id="constellation-3d-canvas"></canvas>
+    <div class="aurora-mesh"></div>
+    <div class="bg-grid"></div>
+    <div class="light-beam light-beam-1"></div>
+    <div class="light-beam light-beam-2"></div>
+    <div class="bg-orbs">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+  </div>
+  <div class="particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Navigation Bar (Matching Reference Layout Header) -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-brand">
+      <div class="brand-logo-c">R</div>
+      <div class="brand-text">
+        <span class="brand-name">Rachna</span>
+      </div>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Hero Section (Kunj Desai Inspired Split Layout) -->
+    <section class="hero section" id="hero">
+      <div class="container hero-grid">
+        <!-- Left Column: Intro & Info Badges -->
+        <div class="hero-left reveal">
+          <p class="hero-greeting">Hi! I'm</p>
+          <h1 class="hero-name">
+            <span class="text-purple-cyan">Rachna</span> <span class="text-white">R</span>
+          </h1>
+          <h2 class="hero-role-headline">
+            AI Engineer &amp; Developer
+          </h2>
+          <p class="hero-tagline">
+            Building intelligent AI agents, RAG assistants, and real-time computer vision pipelines — turning complex
+            Machine Learning models into sleek, high-impact applications.
+          </p>
+
+          <!-- CTA Buttons matching reference design -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn-explore">
+              Explore my work <span class="btn-arrow">↗</span>
+            </a>
+            <a href="#contact" class="btn-connect">Let's connect</a>
+          </div>
+
+          <!-- Social Stack -->
+          <div class="hero-social-row">
+            <span class="social-row-label">Connect with me</span>
+            <div class="social-icons">
+              <a href="https://linkedin.com/in/rachna-r" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </a>
+              <a href="mailto:rachnaramakrishnan10@gmail.com" aria-label="Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </a>
+              <a href="https://github.com/Rachna-techfr" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Hero Portrait with Concentric Orbit Rings & Floating Tech Badges -->
+        <div class="hero-right reveal">
+          <div class="portrait-orbit-container">
+            <div class="orbit-ring orbit-ring-1"></div>
+            <div class="orbit-ring orbit-ring-2"></div>
+            <div class="orbit-ring orbit-ring-3"></div>
+
+            <!-- Orbit Tech Badges placed on the concentric rings -->
+            <span class="tech-orbit-pill pill-genai">GenAI</span>
+            <span class="tech-orbit-pill pill-cv">Computer Vision</span>
+            <span class="tech-orbit-pill pill-rag">RAG</span>
+            <span class="tech-orbit-pill pill-llm">LLMs</span>
+            <span class="tech-orbit-pill pill-agents">Multi-Agent</span>
+            <span class="tech-orbit-pill pill-pytorch">PyTorch</span>
+
+            <img src="assets/picture 1.png" alt="Rachna R — AI Engineer" class="hero-portrait-bw" id="heroPortrait" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="page-chrome page-chrome--section reveal">
+          <span class="page-chrome-left"><span class="mark-icon" aria-hidden="true">✦</span></span>
+          <span class="page-chrome-right"> ✦ ABOUT ME</span>
+        </div>
+        <div class="about-ref-layout">
+          <!-- Top Split: Photo & Signature on Left, Bio Info on Right -->
+          <div class="about-top-split">
+            <div class="about-photo-col reveal">
+              <div class="about-photo-container">
+                <span class="name-watermark" aria-hidden="true">RACHNA</span>
+                <img src="assets/picture 1.png" alt="Rachna R — AI Engineer" class="about-ref-photo" width="520"
+                  height="620" loading="lazy" />
+              </div>
+            </div>
+            <div class="about-bio-col reveal">
+              <p class="about-eyebrow-text">HELLO, I'M</p>
+              <h2 class="about-ref-name">
+                Rachna <span class="text-cyan-highlight">R</span>
+              </h2>
+              <h3 class="about-ref-role">AI Engineer &amp; Machine Learning Developer</h3>
+              <p class="about-ref-para">
+                I'm an Artificial Intelligence &amp; Machine Learning graduate passionate about building practical AI
+                solutions using <span class="text-cyan-bold">Python</span>, <span class="text-cyan-bold">Machine
+                  Learning</span>, <span class="text-cyan-bold">Generative AI</span>, and <span
+                  class="text-cyan-bold">Computer Vision</span>.
+              </p>
+              <p class="about-ref-para">
+                I enjoy turning ideas into working applications — from LLM-powered assistants and RAG systems to
+                real-time computer vision and multi-agent AI projects. I'm excited to solve real-world problems with AI
+                and contribute as an <span class="text-cyan-bold">AI Engineer</span>, <span class="text-cyan-bold">ML
+                  Engineer</span>, or <span class="text-cyan-bold">AI Developer</span>.
+              </p>
+
+              <!-- Stat Badges placed directly below bio paragraphs on the right side -->
+              <div class="about-stats-row">
+                <!-- Stat Pill 1 -->
+                <div class="about-stat-card">
+                  <div class="stat-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                      <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                  </div>
+                  <div class="stat-text-box">
+                    <span class="stat-big-num">8.74</span>
+                    <span class="stat-sub-label">CGPA / 10</span>
+                  </div>
+                </div>
+
+                <!-- Stat Pill 2 -->
+                <div class="about-stat-card">
+                  <div class="stat-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                      <line x1="8" y1="21" x2="16" y2="21"></line>
+                      <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                  </div>
+                  <div class="stat-text-box">
+                    <span class="stat-big-num">4</span>
+                    <span class="stat-sub-label">AI Projects Shipped</span>
+                  </div>
+                </div>
+
+                <!-- Stat Pill 3 -->
+                <div class="about-stat-card">
+                  <div class="stat-icon-wrap">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                  </div>
+                  <div class="stat-text-box">
+                    <span class="stat-big-num">3</span>
+                    <span class="stat-sub-label">Internships Completed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Row: 3 Feature Cards -->
+          <div class="about-cards-row reveal">
+            <!-- Card 1: Core Expertise -->
+            <div class="about-feature-card">
+              <div class="feature-card-header">
+                <div class="feature-icon-circle">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <h4 class="feature-card-title">CORE EXPERTISE</h4>
+              </div>
+              <p class="feature-card-desc">
+                Python, Machine Learning, Generative AI, LLMs, RAG, Computer Vision, OpenCV, Flask, Streamlit.
+              </p>
+            </div>
+
+            <!-- Card 2: What I Build -->
+            <div class="about-feature-card">
+              <div class="feature-card-header">
+                <div class="feature-icon-circle">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 18h6m-4 3h2M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z">
+                    </path>
+                  </svg>
+                </div>
+                <h4 class="feature-card-title">WHAT I BUILD</h4>
+              </div>
+              <p class="feature-card-desc">
+                AI-powered applications, computer vision systems, LLM assistants, RAG applications, and intelligent
+                automation solutions.
+              </p>
+            </div>
+
+            <!-- Card 3: Engineering Approach -->
+            <div class="about-feature-card">
+              <div class="feature-card-header">
+                <div class="feature-icon-circle">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                    </path>
+                  </svg>
+                </div>
+                <h4 class="feature-card-title">ENGINEERING APPROACH</h4>
+              </div>
+              <p class="feature-card-desc">
+                I focus on building practical, reliable AI applications that combine intelligent models with clean,
+                user-friendly experiences.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="skills-intro reveal">
+          <div class="skills-intro-copy">
+            <span class="section-tag"> Skills</span>
+            <h2 class="skills-title">
+              <span class="skills-title-line">TOOLS &amp;</span>
+              <span class="skills-title-line skills-title-accent">SKILLS</span>
+            </h2>
+            <p class="skills-script">Models I train. Systems I ship.</p>
+            <p class="skills-lead">The AI stack I use daily — from foundation models and retrieval to training,
+              evaluation, and deployment.</p>
+          </div>
+          <span class="page-chrome-right skills-intro-label">AI ENGINEER STACK</span>
+        </div>
+        <div class="skills-grid skills-grid--numbered">
+          <div class="skill-card reveal">
+            <span class="skill-num" aria-hidden="true">01</span>
+            <div class="skill-icon">◆</div>
+            <h3>Generative AI &amp; LLMs</h3>
+            <p>Large language models, Groq &amp; Ollama, fine-tuning concepts, embeddings, and production-ready GenAI
+              workflows.</p>
+            <div class="skill-tags">
+              <span>Generative AI</span><span>LLMs</span><span>Embeddings</span><span>Groq</span><span>Ollama</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <span class="skill-num" aria-hidden="true">02</span>
+            <div class="skill-icon">◆</div>
+            <h3>RAG &amp; Vector Search</h3>
+            <p>Retrieval-augmented generation, FAISS, chunking strategies, semantic search, and grounded Q&amp;A over
+              documents.</p>
+            <div class="skill-tags">
+              <span>RAG</span><span>FAISS</span><span>Vector DB</span><span>Semantic Search</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <span class="skill-num" aria-hidden="true">03</span>
+            <div class="skill-icon">◆</div>
+            <h3>LangChain, LangGraph &amp; Agents</h3>
+            <p>Multi-agent orchestration, tool use, stateful graphs, and cooperative AI assistants for complex
+              workflows.</p>
+            <div class="skill-tags">
+              <span>LangChain</span><span>LangGraph</span><span>Multi-Agent</span><span>Agentic AI</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <span class="skill-num" aria-hidden="true">04</span>
+            <div class="skill-icon">◆</div>
+            <h3>Computer Vision &amp; Deep Learning</h3>
+            <p>YOLOv8, OpenCV, MediaPipe, CNNs, TensorFlow, Keras, PyTorch, transfer learning, and real-time inference.
+            </p>
+            <div class="skill-tags">
+              <span>Computer Vision</span><span>YOLOv8</span><span>TensorFlow</span><span>PyTorch</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <span class="skill-num" aria-hidden="true">05</span>
+            <div class="skill-icon">◆</div>
+            <h3>NLP &amp; Prompt Engineering</h3>
+            <p>Intent recognition, speech interfaces, prompt templates, evaluation, and NLP pipelines for assistants.
+            </p>
+            <div class="skill-tags">
+              <span>NLP</span><span>Prompt Engineering</span><span>STT/TTS</span><span>Whisper</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <span class="skill-num" aria-hidden="true">06</span>
+            <div class="skill-icon">◆</div>
+            <h3>MLOps, APIs &amp; Deployment</h3>
+            <p>FastAPI, Streamlit, Flask, Django REST, Git, CI/CD basics, model serving, and monitoring-minded delivery.
+            </p>
+            <div class="skill-tags">
+              <span>Model Deployment</span><span>FastAPI</span><span>Streamlit</span><span>Python</span><span>Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="projects-intro reveal">
+          <div>
+            <span class="section-tag"> Projects</span>
+            <h2 class="projects-title">
+              <span>AI</span>
+              <span class="projects-title-accent">PROJECTS</span>
+            </h2>
+            <p class="skills-script">Selected work</p>
+            <p class="projects-lead">End-to-end AI builds — agents, vision, and NLP — with measurable accuracy and
+              deployable backends.</p>
+          </div>
+          <span class="page-chrome-right">FEATURED WORK</span>
+        </div>
+        <div class="projects-list">
+          <article class="project-card project-card--row project-card--featured reveal" data-tilt>
+            <div class="project-image">
+              <img src="assets/project_security_guard.jpg" alt="Vision-Based Virtual AI Security Guard"
+                class="project-cover-img" loading="lazy" />
+              <div class="project-overlay">
+                <a href="projects/security-guard.html" class="project-link"
+                  aria-label="View AI Security Guard details">View Details &rarr;</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-info-top">
+                <span class="project-category">Computer Vision</span>
+                <span class="project-featured-badge">Featured</span>
+              </div>
+              <h3>Vision-Based Virtual AI Security Guard</h3>
+              <p>Real-time surveillance with 91% human detection accuracy using YOLOv8 and DeepSort, with automated
+                alerts and adaptive threat detection.</p>
+              <p class="project-outcome"><span>Key outcome</span> 91% human detection accuracy</p>
+              <div class="project-tech">
+                <span>YOLOv8</span><span>DeepSort</span><span>Flask</span>
+              </div>
+              <a href="projects/security-guard.html" class="project-inline-link">View details &rarr;</a>
+            </div>
+          </article>
+          <article class="project-card project-card--row project-card--featured reveal" data-tilt>
+            <div class="project-image">
+              <img src="assets/project_hand_gesture.jpg" alt="Real-Time Hand Gesture Recognition and Adaptive Control"
+                class="project-cover-img" loading="lazy" />
+              <div class="project-overlay">
+                <a href="projects/hand-gesture.html" class="project-link"
+                  aria-label="View Hand Gesture Recognition details">View Details &rarr;</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-info-top">
+                <span class="project-category">Computer Vision</span>
+                <span class="project-featured-badge">Featured</span>
+              </div>
+              <h3>Real-Time Hand Gesture Recognition and Adaptive Control</h3>
+              <p>Real-time gesture control with 94% classification accuracy using MediaPipe and KNN, with adaptive mouse
+                control and voice feedback.</p>
+              <p class="project-outcome"><span>Key outcome</span> 94% classification accuracy</p>
+              <div class="project-tech">
+                <span>MediaPipe</span><span>KNN</span><span>OpenCV</span>
+              </div>
+              <a href="projects/hand-gesture.html" class="project-inline-link">View details &rarr;</a>
+            </div>
+          </article>
+          <article class="project-card project-card--row project-card--featured reveal" data-tilt>
+            <div class="project-image">
+              <img src="assets/project_ai_assistant.jpg" alt="Personal AI Assistant" class="project-cover-img"
+                loading="lazy" />
+              <div class="project-overlay">
+                <a href="projects/ai-assistant.html" class="project-link"
+                  aria-label="View Personal AI Assistant details">View Details &rarr;</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-info-top">
+                <span class="project-category">NLP · LLM Assistant</span>
+                <span class="project-featured-badge">Featured</span>
+              </div>
+              <h3>Personal AI Assistant</h3>
+              <p>Locally hosted NLP assistant with 88% intent recognition using Ollama (Mistral), speech recognition,
+                and system automation — zero external API dependency.</p>
+              <p class="project-outcome"><span>Key outcome</span> 88% intent recognition</p>
+              <div class="project-tech">
+                <span>Ollama</span><span>LLMs</span><span>NLP</span><span>Flask</span>
+              </div>
+              <a href="projects/ai-assistant.html" class="project-inline-link">View details &rarr;</a>
+            </div>
+          </article>
+          <article class="project-card project-card--row reveal" data-tilt>
+            <div class="project-image">
+              <img src="assets/project_career_buddy.jpg" alt="Career Buddy — AI Multi-Agent Platform"
+                class="project-cover-img" loading="lazy" />
+              <div class="project-overlay">
+                <a href="projects/career-buddy.html" class="project-link" aria-label="View Career Buddy details">View
+                  Details &rarr;</a>
+              </div>
+            </div>
+            <div class="project-info">
+              <span class="project-category">Multi-Agent AI</span>
+              <h3>Career Buddy</h3>
+              <p>Cooperative multi-agent career assistant with 5 LangGraph agents, RAG pipeline, voice interview
+                simulation, and Streamlit + FastAPI deployment.</p>
+              <p class="project-outcome"><span>Key outcome</span> 5 LangGraph agents with RAG and FastAPI deployment</p>
+              <div class="project-tech">
+                <span>LangGraph</span><span>RAG</span><span>FastAPI</span><span>FAISS</span>
+              </div>
+              <a href="projects/career-buddy.html" class="project-inline-link">View details &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Experience</span>
+          <h2 class="section-title">My <em>journey</em></h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Jun 2026 — Jul 2026</span>
+              <h3>Data Science &amp; Analytics Intern</h3>
+              <p class="timeline-company">Amdox Technologies</p>
+              <p>Showed dedication, professionalism, and strong willingness to learn. Contributed effectively to
+                assigned tasks with steady growth in technical and collaborative skills.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Jun 2025 — Jul 2025</span>
+              <h3>Generative AI &amp; Prompt Engineering Intern</h3>
+              <p class="timeline-company">Gateway Software Solutions</p>
+              <p>Developed Generative AI workflows using Python, LLM APIs, and prompt engineering to improve model
+                response accuracy. Designed optimized prompt templates and documented experimental results.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Apr 2025 — May 2025</span>
+              <h3>Python with Django Intern</h3>
+              <p class="timeline-company">Accent Techno Soft</p>
+              <p>Built backend modules using Python and Django for web application features and REST API endpoints.
+                Assisted in application testing, bug fixing, and version management using Git.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2023 — 2026</span>
+              <h3>B.Voc (Bachelor of Vocation) in AI &amp; Machine Learning</h3>
+              <p class="timeline-company">Avinashilingam University</p>
+              <p>
+                Completed Bachelor of Vocation in Artificial Intelligence and Machine Learning with CGPA 8.74/10.
+                Built expertise in computer vision, NLP, Generative AI, and multi-agent systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-wrapper reveal">
+          <div class="contact-border-glow" aria-hidden="true"></div>
+          <div class="contact-content">
+            <span class="section-tag">Contact</span>
+            <h2 class="section-title contact-title">
+              LET'S BUILD<br />
+              <span class="contact-title-accent">SOMETHING SMART TOGETHER</span>
+              <span class="contact-title-script" aria-hidden="true"></span>
+            </h2>
+            <p class="contact-lead">
+              Looking for an AI Engineer role or internship? I'd love to connect.
+              Based in Coimbatore, Tamil Nadu — reach out via email or LinkedIn.
+            </p>
+            <div class="contact-info-grid">
+              <div class="contact-info-item">
+                <span class="contact-info-label">Name</span>
+                <span class="contact-info-value">Rachna R</span>
+              </div>
+              <div class="contact-info-item">
+                <span class="contact-info-label">Role</span>
+                <span class="contact-info-value">AI Engineer (Fresher)</span>
+              </div>
+              <div class="contact-info-item">
+                <span class="contact-info-label">Email</span>
+                <a href="mailto:rachnaramakrishnan10@gmail.com"
+                  class="contact-info-value">rachnaramakrishnan10@gmail.com</a>
+              </div>
+            </div>
+            <form class="contact-form" id="contactForm" method="POST">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Queries / Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Enter your queries or message here..."
+                  required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">Send Message ↗</button>
+            </form>
+            <div class="contact-links">
+              <a href="mailto:rachnaramakrishnan10@gmail.com" class="contact-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                rachnaramakrishnan10@gmail.com
+              </a>
+              <a href="https://linkedin.com/in/rachna-r" target="_blank" rel="noopener" class="contact-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                LinkedIn
+              </a>
+              <a href="https://github.com/Rachna-techfr" target="_blank" rel="noopener" class="contact-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Rachna R · AI Engineer Portfolio</p>
+      <a href="#hero" class="back-to-top">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
