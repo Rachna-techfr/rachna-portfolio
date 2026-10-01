@@ -1,4 +1,4 @@
-# Portfolio — Digital Twin
+# Portfolio 
 
 A professional, mesmerizing single-page portfolio built with pure HTML, CSS, and JavaScript. No build step required.
 
